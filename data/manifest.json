@@ -1,0 +1,55 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-04-21",
+  "categories": [
+    {
+      "id": "koukuuhou",
+      "name": "航空法",
+      "icon": "⚖️",
+      "file": "data/questions/01_koukuuhou.json",
+      "description": "航空法の規定・禁止空域・許可承認制度"
+    },
+    {
+      "id": "hiko-kisei",
+      "name": "飛行規制",
+      "icon": "🚫",
+      "file": "data/questions/02_hiko-kisei.json",
+      "description": "飛行制限・目視外・安全距離"
+    },
+    {
+      "id": "kiki",
+      "name": "機体・構造",
+      "icon": "🔧",
+      "file": "data/questions/03_kiki.json",
+      "description": "機体登録・構造・システム"
+    },
+    {
+      "id": "kisho",
+      "name": "気象",
+      "icon": "🌤️",
+      "file": "data/questions/04_kisho.json",
+      "description": "飛行に影響する気象現象"
+    },
+    {
+      "id": "soju",
+      "name": "操縦技術",
+      "icon": "🕹️",
+      "file": "data/questions/05_soju.json",
+      "description": "操縦方法・緊急時対応"
+    },
+    {
+      "id": "battery",
+      "name": "バッテリー",
+      "icon": "🔋",
+      "file": "data/questions/06_battery.json",
+      "description": "バッテリー管理・電気系統"
+    },
+    {
+      "id": "denpahou",
+      "name": "電波法",
+      "icon": "📡",
+      "file": "data/questions/07_denpahou.json",
+      "description": "電波使用規制・免許"
+    }
+  ]
+}
