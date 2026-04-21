@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ドローン資格対策 学習アプリ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- スタート画面 -->
+    <div id="screen-start" class="screen active">
+      <div class="hero">
+        <div class="hero-icon">🚁</div>
+        <h1>ドローン資格<br>対策アプリ</h1>
+        <p class="hero-sub">一等・二等無人航空機操縦士<br>試験対策練習問題</p>
+      </div>
+      <div class="start-info">
+        <div class="info-row">
+          <span class="info-label">問題数</span>
+          <span class="info-value" id="total-count">読み込み中…</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">出題形式</span>
+          <span class="info-value">4択・ランダム</span>
+        </div>
+      </div>
+      <button id="btn-start" class="btn btn-primary" disabled>スタート</button>
+    </div>
+
+    <!-- クイズ画面 -->
+    <div id="screen-quiz" class="screen">
+      <header class="quiz-header">
+        <div class="progress-info">
+          <span id="q-current">1</span> / <span id="q-total">10</span>
+        </div>
+        <div class="score-info">
+          正解率 <span id="score-rate">0</span>%
+        </div>
+      </header>
+      <div class="progress-bar-wrap">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+
+      <div class="question-card">
+        <div class="category-badge" id="q-category"></div>
+        <p id="q-text" class="question-text"></p>
+      </div>
+
+      <div id="choices" class="choices"></div>
+
+      <div id="feedback" class="feedback hidden">
+        <div id="feedback-header" class="feedback-header"></div>
+        <p id="feedback-explanation" class="feedback-explanation"></p>
+        <button id="btn-next" class="btn btn-primary">次の問題へ</button>
+      </div>
+    </div>
+
+    <!-- 結果画面 -->
+    <div id="screen-result" class="screen">
+      <div class="result-hero">
+        <div id="result-emoji" class="result-emoji"></div>
+        <h2 id="result-title" class="result-title"></h2>
+        <div class="result-score-ring">
+          <svg viewBox="0 0 120 120" class="ring-svg">
+            <circle cx="60" cy="60" r="52" class="ring-bg" />
+            <circle cx="60" cy="60" r="52" id="ring-progress" class="ring-fill" />
+          </svg>
+          <div class="ring-label">
+            <span id="result-correct">0</span>/<span id="result-total">0</span>
+            <small>問正解</small>
+          </div>
+        </div>
+        <p class="result-percent"><span id="result-rate">0</span>%</p>
+      </div>
+
+      <div id="result-breakdown" class="result-breakdown"></div>
+
+      <div class="result-actions">
+        <button id="btn-retry" class="btn btn-primary">もう一度挑戦</button>
+        <button id="btn-review" class="btn btn-secondary">間違えた問題を見る</button>
+      </div>
+    </div>
+
+    <!-- 復習画面 -->
+    <div id="screen-review" class="screen">
+      <header class="review-header">
+        <button id="btn-back" class="btn-icon">←</button>
+        <h2>間違えた問題</h2>
+      </header>
+      <div id="review-list" class="review-list"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
